@@ -16,8 +16,6 @@ object TariffManager {
 
 //  The current tariff
   private val tariffList: util.List[Tariff] = new util.ArrayList[Tariff]
-  private val tariffList1: util.List[Tariff] = new util.ArrayList[Tariff]
-  private val scppList: util.List[SCPP] = new util.ArrayList[SCPP]
 
   /**
     * Returns the current tariff information
