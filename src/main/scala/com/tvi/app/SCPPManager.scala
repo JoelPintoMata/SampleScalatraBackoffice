@@ -3,7 +3,6 @@ package com.tvi.app
 import java.util
 import scala.collection.JavaConversions._
 
-import org.joda.time.{DateTime, Hours}
 
 object SCPPManager {
 
@@ -59,13 +58,12 @@ object SCPPManager {
 //      , preferred to save it and allow to process it later on once an admin checks the scpp(s) with 0$ fees and fixes them
       case None => 0.0
       case Some(tariff) => {
-        val d1: org.joda.time.DateTime = DateTime.parse(scpp.startTime)
-        val d2: org.joda.time.DateTime = DateTime.parse(scpp.endTime)
+        val miliseconds = format.parse(scpp.endTime).getTime - format.parse(scpp.startTime).getTime
 
-        val hours = Hours.hoursBetween(d1, d2)
+        import java.util.concurrent.TimeUnit
+        val hours = TimeUnit.MILLISECONDS.toHours(miliseconds)
 
-//        TODO no conversion of hours => int to double?
-        tariff.startFee + (tariff.hourlyFee * hours.getHours) + (tariff.feePerKWh * scpp.volume)
+        tariff.startFee + (tariff.hourlyFee * hours) + (tariff.feePerKWh * scpp.volume)
       }
     }
   }
