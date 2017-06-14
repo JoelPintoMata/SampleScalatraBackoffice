@@ -4,7 +4,7 @@ import org.scalatra._
 import org.json4s.{DefaultFormats, Formats}
 import org.scalatra.json.JacksonJsonSupport
 
-class MainScalatraServlet extends TVIBackofficeStack with JacksonJsonSupport {
+class MainScalatraServlet extends sampleScalatraBackofficeStack with JacksonJsonSupport {
 
   /**
     * HealthCheck
