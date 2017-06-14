@@ -1,0 +1,106 @@
+{
+	"id": "6d3596ef-e74e-c959-5fdd-1273becf2f31",
+	"name": "TVI",
+	"description": "",
+	"order": [
+		"c7990dec-4f1b-6dfd-3b47-d8e74c0cba7c",
+		"1d6e12f7-e398-5af9-1563-821be8508a3f",
+		"cb9b0c28-c7c1-a4e5-4eab-56ec8828d177"
+	],
+	"folders": [],
+	"timestamp": 1496993381362,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "1d6e12f7-e398-5af9-1563-821be8508a3f",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/scpp",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1497171025988,
+			"name": "POST - http://localhost:8080/scpp",
+			"description": "Posts a new scpp",
+			"collectionId": "6d3596ef-e74e-c959-5fdd-1273becf2f31",
+			"responses": [],
+			"rawModeData": "{\n  \"customerId\": \"john\",\n  \"startTime\": \"2099-01-28T09:34:17\",\n  \"endTime\": \"2099-01-28T16:45:13\",\n  \"volume\": 32.03\n}"
+		},
+		{
+			"id": "c7990dec-4f1b-6dfd-3b47-d8e74c0cba7c",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/tariff",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1497171007982,
+			"name": "POST - http://localhost:8080/tariff",
+			"description": "Posts a new tariff",
+			"collectionId": "6d3596ef-e74e-c959-5fdd-1273becf2f31",
+			"responses": [],
+			"rawModeData": "{\n  \"startFee\": 0.20,\n  \"hourlyFee\": 1.00,\n  \"feePerKWh\": 0.25,\n  \"activeStarting\": \"2099-01-01T00:00:00.000Z\"\n}"
+		},
+		{
+			"id": "cb9b0c28-c7c1-a4e5-4eab-56ec8828d177",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/overview",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1497126448461,
+			"name": "POST - http://localhost:8080/overview",
+			"description": "Posts a new scpp",
+			"collectionId": "6d3596ef-e74e-c959-5fdd-1273becf2f31",
+			"responses": [],
+			"rawModeData": "{\n  \"customerId\": \"john\",\n  \"startTime\": \"2017-01-28T09:34:17\",\n  \"endTime\": \"2017-01-28T16:45:13\",\n  \"volume\": 32.03\n}"
+		}
+	]
+}
