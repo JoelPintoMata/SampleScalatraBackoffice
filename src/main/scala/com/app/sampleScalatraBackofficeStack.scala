@@ -1,4 +1,4 @@
-package com.tvi.app
+package com.app
 
 import org.scalatra._
 import scalate.ScalateSupport

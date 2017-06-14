@@ -1,6 +1,7 @@
-package com.tvi.app
+package com.app
 
 import java.util
+
 import scala.collection.JavaConversions._
 
 

@@ -1,7 +1,8 @@
-package com.tvi.app
+package com.app
 
 import java.util
 import java.util.Calendar
+
 import scala.collection.JavaConversions._
 
 

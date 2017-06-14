@@ -1,4 +1,4 @@
-package com.tvi.app
+package com.app
 
 /**
   * Service tarif case class

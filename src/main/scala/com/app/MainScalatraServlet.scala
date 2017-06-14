@@ -1,6 +1,5 @@
-package com.tvi.app
+package com.app
 
-import org.scalatra._
 import org.json4s.{DefaultFormats, Formats}
 import org.scalatra.json.JacksonJsonSupport
 
