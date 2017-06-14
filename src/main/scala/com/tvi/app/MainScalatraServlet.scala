@@ -23,8 +23,8 @@ class MainScalatraServlet extends sampleScalatraBackofficeStack with JacksonJson
     * Posts a new tariff
     */
   post("/tariff") {
-    val tarif = parsedBody.extract[Tariff]
-    val result = TariffManager.set(tarif)
+    val tariff = new Tariff(params("startFee").asInstanceOf[BigDecimal], params("hourlyFee").asInstanceOf[BigDecimal], params("feePerKWh").asInstanceOf[BigDecimal], params("activeStarting"));
+    val result = TariffManager.set(tariff)
 
     contentType = "text/html"
     jade(
@@ -32,15 +32,15 @@ class MainScalatraServlet extends sampleScalatraBackofficeStack with JacksonJson
       "layout" -> "WEB-INF/templates/layouts/default.jade",
       "title" -> "POST tariff",
       "result" -> result.toString,
-      "startFee" -> tarif.startFee,
-      "hourlyFee" -> tarif.hourlyFee,
-      "feePerKWh" -> tarif.feePerKWh,
-      "activeStarting" -> tarif.activeStarting
+      "startFee" -> tariff.startFee,
+      "hourlyFee" -> tariff.hourlyFee,
+      "feePerKWh" -> tariff.feePerKWh,
+      "activeStarting" -> tariff.activeStarting
     )
   }
 
   post("/scpp") {
-    val scpp = parsedBody.extract[SCPP]
+    val scpp = new SCPP(params("customerId"), params("startTime"), params("endTime"), params("volume").asInstanceOf[BigDecimal]);
     val result = SCPPManager.add(scpp)
 
     contentType = "text/html"
