@@ -1,7 +1,6 @@
 package com.tvi.app
 
 import java.util
-import java.util.Calendar
 import scala.collection.JavaConversions._
 
 import org.joda.time.{DateTime, Hours}
@@ -53,12 +52,12 @@ object SCPPManager {
     * Calculates the fee for this scpp
     * @return the fee
     */
-  def fee(scpp: SCPP): Double = {
+  def fee(scpp: SCPP): BigDecimal = {
     TariffManager.getCurrentTariff() match {
 //      TODO what to do where? This cant be zero...
 //      could have easily reject it in this case
 //      , preferred to save it and allow to process it later on once an admin checks the scpp(s) with 0$ fees and fixes them
-      case None => 0
+      case None => 0.0
       case Some(tariff) => {
         val d1: org.joda.time.DateTime = DateTime.parse(scpp.startTime)
         val d2: org.joda.time.DateTime = DateTime.parse(scpp.endTime)

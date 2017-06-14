@@ -7,7 +7,10 @@ package com.tvi.app
   * @param feePerKWh A fee for the energy that the car consumed
   * @param activeStarting The moment from which this tariff is active
   */
-case class Tariff(startFee: Double, hourlyFee: Double, feePerKWh: Double, activeStarting: String) extends TariffToString
+case class Tariff(startFee: BigDecimal,
+                  hourlyFee: BigDecimal,
+                  feePerKWh: BigDecimal,
+                  activeStarting: String) extends TariffToString
 
 /**
   * Custom toString method

@@ -2,8 +2,8 @@ package com.tvi.app
 
 import java.util
 import java.util.Calendar
+import scala.collection.JavaConversions._
 
-import com.tvi.app.TariffManager.format
 
 /**
   * Tariff Manager
@@ -14,7 +14,9 @@ object TariffManager {
     new java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
 
 //  The current tariff
-  private val tariffList: util.ArrayList[Tariff] = new util.ArrayList[Tariff]
+  private val tariffList: util.List[Tariff] = new util.ArrayList[Tariff]
+  private val tariffList1: util.List[Tariff] = new util.ArrayList[Tariff]
+  private val scppList: util.List[SCPP] = new util.ArrayList[SCPP]
 
   /**
     * Returns the current tariff information
@@ -23,7 +25,7 @@ object TariffManager {
   def getCurrentTariff(): Option[Tariff] = {
     tariffList.isEmpty match {
       case true => None
-      case false => Some(tariffList.get(0))
+      case false => Some(tariffList.toList.head)
     }
   }
 

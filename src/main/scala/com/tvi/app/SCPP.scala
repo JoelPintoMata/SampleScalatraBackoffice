@@ -10,7 +10,7 @@ package com.tvi.app
 case class SCPP(customerId: String,
                 startTime: String,
                 endTime: String,
-                volume: Double)
+                volume: BigDecimal)
     extends CustomToString
 
 /**
