@@ -3,7 +3,7 @@ package com.app
 import org.json4s.{DefaultFormats, Formats}
 import org.scalatra.json.JacksonJsonSupport
 
-class MainScalatraServlet extends sampleScalatraBackofficeStack with JacksonJsonSupport {
+class MainScalatraServlet extends sampleScalatraRestAPIStack with JacksonJsonSupport {
 
   /**
     * HealthCheck

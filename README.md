@@ -1,4 +1,4 @@
-# tvi-backoffice #
+# Sample Scalatra Rest API #
 
 ## Build & Run ##
 
