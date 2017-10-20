@@ -24,7 +24,7 @@ object TariffManager {
   def getCurrentTariff(): Option[Tariff] = {
     tariffList.isEmpty match {
       case true => None
-      case false => Some(tariffList.toList.head)
+      case false => tariffList.headOption
     }
   }
 
